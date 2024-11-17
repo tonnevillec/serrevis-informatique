@@ -2,6 +2,7 @@ import './App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import AboutMentionsLegales from "./pages/apropos/AboutMentionsLegales.jsx";
+import {ToastContainer} from "react-toastify";
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
                 <Route path={"/about/mentions-legales"} element={<AboutMentionsLegales />} />
             </Route>
         </Routes>
+
+        <ToastContainer />
     </BrowserRouter>
   )
 }

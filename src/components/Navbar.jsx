@@ -6,7 +6,7 @@ const Navbar = () => {
         <header className="z-100 flex flex-col fixed top-0 left-0 w-full">
             <div
                 className="p-2 flex flex-row items-center justify-center bg-serrevis-100 w-full">
-                    <Link to={"section-header"} className="text-xl text-white">Serre-Vis Informatique</Link>
+                    <Link smooth spy to={"top"} className="text-xl text-white">Serre-Vis Informatique</Link>
             </div>
 
             <section className={"flex flex-row items-center justify-center bg-blue-100 w-full shadow-lg"}>

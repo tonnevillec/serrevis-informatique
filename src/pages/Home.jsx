@@ -2,18 +2,18 @@ import React from 'react';
 import {Link, Outlet, useLocation} from "react-router-dom";
 import Landing from "./Landing.jsx";
 import Navbar from "../components/Navbar.jsx";
-import ScrollToAnchor from "../components/ScrollToAnchor.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
+import MentionsLegales from "./MentionsLegales.jsx";
+import Confidentialite from "./Confidentialite.jsx";
+import PlanSite from "./PlanSite.jsx";
 
 const Home = () => {
     const location = useLocation()
 
     return (
         <>
-        <ScrollToAnchor />
-
-        <div id={"page-container"}
+        <div id={"page-container top"}
              className={"mx-auto min-h-screen w-full"}
         >
             <Navbar/>
@@ -27,8 +27,8 @@ const Home = () => {
             </main>
         </div>
 
-            <footer className="footer bg-serrevis-100 text-neutral-content p-10">
-                <aside>
+            <footer className="footer bg-serrevis-100 p-10">
+                <aside className={"text-neutral-content"}>
                     <svg
                         width="50"
                         height="50"
@@ -45,7 +45,7 @@ const Home = () => {
                     </p>
                 </aside>
 
-                <nav>
+                <nav className={"text-neutral-content"}>
                     <h6 className="footer-title">Contact</h6>
                     <address className="">
                         2/4 Place Jules Guesde<br/>
@@ -60,10 +60,13 @@ const Home = () => {
                 </nav>
 
                 <nav>
-                    <h6 className="footer-title">A propos</h6>
-                    <Link to={"/about/mentions-legales"} className="link link-hover">Mentions légales</Link>
-                    <a className="link link-hover">Politique de confidentialité</a>
-                    <a className="link link-hover">Plan du site</a>
+                    <h6 className="footer-title text-neutral-content">A propos</h6>
+                    <MentionsLegales />
+                    <Confidentialite />
+                    <PlanSite />
+                    {/*<Link to={"/mentions-legales"} className="link link-hover">Mentions légales</Link>*/}
+                    {/*<Link to={"/confidentialite"} className="link link-hover">Politique de confidentialité</Link>*/}
+                    {/*<Link to={"/plan-du-site"} className="link link-hover">Plan du site</Link>*/}
                 </nav>
             </footer>
         </>

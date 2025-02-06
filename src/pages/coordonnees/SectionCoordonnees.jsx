@@ -20,7 +20,7 @@ const SectionCoordonnees = () => {
                                 59810 LESQUIN<br/>
                                 <br/>
                                 <FontAwesomeIcon icon={faPhone}
-                                                 className={"me-2"}></FontAwesomeIcon>03.65.67.05.18<br/>
+                                                 className={"me-2"}></FontAwesomeIcon>03 65 67 05 18<br/>
                                 <br/>
                                 <FontAwesomeIcon icon={faEnvelope} className={"me-2"}></FontAwesomeIcon>contact@serrevis-informatique.fr
                             </p>
@@ -32,40 +32,40 @@ const SectionCoordonnees = () => {
                                 <tbody>
                                 <tr>
                                     <td>Lundi :</td>
-                                    <td>8h30 - 12h</td>
-                                    <td>14h30 - 18h</td>
+                                    <td>8h15 - 12h</td>
+                                    <td>14h30 - 18h45</td>
                                 </tr>
                                 <tr>
                                     <td>Mardi :</td>
-                                    <td>8h30 - 12h</td>
-                                    <td>14h30 - 18h</td>
+                                    <td>8h15 - 12h</td>
+                                    <td>14h30 - 18h45</td>
                                 </tr>
                                 <tr>
                                     <td>Mercredi :</td>
-                                    <td>8h30 - 12h</td>
-                                    <td>14h30 - 18h</td>
+                                    <td>8h15 - 12h</td>
+                                    <td>14h30 - 18h45</td>
                                 </tr>
                                 <tr>
                                     <td>Jeudi :</td>
-                                    <td>8h30 - 12h</td>
-                                    <td>14h30 - 18h</td>
+                                    <td>8h15 - 12h</td>
+                                    <td>14h30 - 18h45</td>
                                 </tr>
                                 <tr>
                                     <td>Vendredi :</td>
-                                    <td>8h30 - 12h</td>
-                                    <td>14h30 - 18h</td>
+                                    <td>8h15 - 12h</td>
+                                    <td>14h30 - 18h45</td>
                                 </tr>
                                 <tr>
                                     <td>Samedi :</td>
-                                    <td>8h30 - 12h</td>
+                                    <td>8h15 - 12h</td>
                                     <td>
                                         Atelier de groupe
-                                        <br/>14h30 - 18h
+                                        <br/>14h30 - 18h45
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Dimanche :</td>
-                                    <td>9h - 12h</td>
+                                    <td>10h - 13h</td>
                                     <td></td>
                                 </tr>
                                 </tbody>

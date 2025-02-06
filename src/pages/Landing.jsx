@@ -7,7 +7,6 @@ import SectionAgenda from "./agenda/SectionAgenda.jsx";
 import SectionAvis from "./avis/SectionAvis.jsx";
 
 const Landing = () => {
-
     return (
         <>
             <section className="w-full bg-gradient-to-b from-blue-100 py-24" id={"section-header"}>
@@ -36,9 +35,9 @@ const Landing = () => {
 
             <SectionCoordonnees />
 
-            <SectionAgenda />
+            {/*<SectionAgenda />*/}
 
-            <SectionAvis />
+            {/*<SectionAvis />*/}
         </>
     );
 };

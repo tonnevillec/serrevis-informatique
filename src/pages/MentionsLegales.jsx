@@ -24,7 +24,7 @@ const MentionsLegales = () => {
                     </div>
 
                     <div className={"py-4 px-8 text-justify"}>
-                        <p>#TODO</p>
+                        <p>Page en cours de réalisation</p>
                     </div>
                 </div>
 

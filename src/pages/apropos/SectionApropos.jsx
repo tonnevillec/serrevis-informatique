@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutCarousel from "./AboutCarousel.jsx";
+import photo from "../../assets/photo.jpg";
 
 const SectionApropos = () => {
     return (
@@ -53,7 +54,7 @@ const SectionApropos = () => {
 
                             <div className="p-2">
                                 <figure className={"col-span-1"}>
-                                    <img src={"https://picsum.photos/800/600"} className={"object-cover"} alt={""}/>
+                                    <img src={photo} className={"object-cover"} alt={""}/>
                                 </figure>
 
                                 <div className={"w-full text-center"}>Benoit RICOU</div>

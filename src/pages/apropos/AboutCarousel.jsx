@@ -2,34 +2,76 @@ import React, {useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faImage, faXmark} from "@fortawesome/free-solid-svg-icons";
 
+import img1 from '../../assets/atelier/Ilot_Apple-Mac01.jpg'
+import img2 from '../../assets/atelier/Ilot_Apple-Mac02.jpg'
+import img3 from '../../assets/atelier/Ilot_Ordi-Portable01.jpg'
+import img4 from '../../assets/atelier/Ilot_Ordi-Portable02.jpg'
+import img5 from '../../assets/atelier/Interieur_local.jpg'
+import img6 from '../../assets/atelier/Montage-sur-mesure_Ordi-Tour01.jpg'
+import img7 from '../../assets/atelier/Montage-sur-mesure_Ordi-Tour02.jpg'
+import img8 from '../../assets/atelier/Montage-sur-mesure_Ordi-Tour03.jpg'
+import img9 from '../../assets/atelier/Plan-travail_Montage01.jpg'
+import img10 from '../../assets/atelier/Plan-travail_Montage02.jpg'
+import img11 from '../../assets/atelier/Plan-travail_Ordi-portables.jpg'
+
 const AboutCarousel = () => {
     const [modalDatas, setModalDatas] = useState({})
 
     const datas = [
         {
             id: 1,
-            titre: "Premiere image",
-            url: "https://picsum.photos/800/600"
+            titre: "Ilot Apple-Mac",
+            url: img1
         },
         {
             id: 2,
-            titre: "Seconde image",
-            url: "https://picsum.photos/800/600"
+            titre: "Ilot Apple-Mac",
+            url: img2
         },
         {
             id: 3,
-            titre: "Troisieme image",
-            url: "https://picsum.photos/1280/1024"
+            titre: "Ilot Ordinateur Portable",
+            url: img3
         },
         {
             id: 4,
-            titre: "Quatrieme image",
-            url: "https://picsum.photos/800/600"
+            titre: "Ilot Ordinateur Portable",
+            url: img4
         },
         {
             id: 5,
-            titre: "Cinquieme image",
-            url: "https://picsum.photos/800/600"
+            titre: "Intérieur local",
+            url: img5
+        },
+        {
+            id: 6,
+            titre: "Montage sur mesure Ordinateur Tour",
+            url: img6
+        },
+        {
+            id: 7,
+            titre: "Montage sur mesure Ordinateur Tour",
+            url: img7
+        },
+        {
+            id: 8,
+            titre: "Montage sur mesure Ordinateur Tour",
+            url: img8
+        },
+        {
+            id: 9,
+            titre: "Plan de travail Montage",
+            url: img9
+        },
+        {
+            id: 10,
+            titre: "Plan de travail Montage",
+            url: img10
+        },
+        {
+            id: 11,
+            titre: "Plan de travail Ordinateurs portables",
+            url: img11
         },
     ]
 

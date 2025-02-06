@@ -13,6 +13,7 @@ export default {
         },
         serrevis: {
           100: '#333541',
+          200: '#2F2F2F',
         },
       },
       zIndex: {

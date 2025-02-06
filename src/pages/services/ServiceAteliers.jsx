@@ -30,31 +30,30 @@ const ServiceAteliers = () => {
                 },
                 {
                     id: '1.2',
-                    titre: 'Diagnostic rapide PCs/Smartphone/Tablette/Console',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
+                    titre: 'Diagnostic complet d\'un PC portable',
+                    description: "                   <p>Recherche de panne matériel uniquement, sur un seul composant maximum (Carte mère, ou Alim, ou RAM, ou Disque, ou Carte Graphique).</p>\n" +
                         "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
+                        "                            <p>Tests croisés possible mais court -> Devis de réparation. Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
                         "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
-                    valeur: '25€'
+                        "                            <p>Possibilité d’intervention dans les 72H pour 25€ en plus</p>",
+                    valeur: '35€'
                 },
                 {
                     id: '1.3',
                     titre: 'Diagnostic rapide PCs/Smartphone/Tablette/Console',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
-                    valeur: '15€'
+                    description: "<p>Recherche de panne matériel ou logiciel, tests ciblés sur 4 ou 5 composants maximum,\n\" +" +
+                        " tests croisés possible mais court -> Devis de réparation. Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
+                        "<br/><p>Possibilité d’intervention dans l’instant en rajoutant la prestation « Service+ intervention immédiate » à 5€</p>",
+                    valeur: '15€',
+                },
+                {
+                    id: '1.4',
+                    titre: 'Diagnostic rapide d’un seul composant seul',
+                    description: "<p>Recherche de panne matériel uniquement, sur un seul\n" +
+                            "composant maximum (Carte mère, ou Alim, ou RAM, ou Disque, ou Carte Graphique).</p><br/><p>Tests croisés possible mais court\n" +
+                            " -> Devis de réparation. Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
+                            "<p>Possibilité d’intervention dans l’instant en rajoutant la prestation « Service+ intervention immédiate » à 5€</p>",
+                    valeur: '5€',
                 },
             ]
         },
@@ -65,43 +64,19 @@ const ServiceAteliers = () => {
                 {
                     id: '2.1',
                     titre: 'Changement de dalle / clavier de pc portable',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '50€'
                 },
                 {
                     id: '2.2',
                     titre: 'Réparation d\'un composant diagnostiqué défectueux',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p</p>",
                     valeur: '35€'
                 },
                 {
                     id: '2.3',
                     titre: 'Micro-soudure de composant',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '15€'
                 },
             ]
@@ -113,57 +88,25 @@ const ServiceAteliers = () => {
                 {
                     id: '3.1',
                     titre: 'Installation / Mise à niveau / Restauration d\'un OS',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '50€'
                 },
                 {
                     id: '3.2',
                     titre: 'Installation d\'un logiciel / mise en service initiale',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '35€'
                 },
                 {
                     id: '3.3',
                     titre: 'Flash / BackFlash et paramétrage de BIOS UEFI',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '15€'
                 },
                 {
                     id: '3.4',
                     titre: 'Flashage d\'une ROM sur Smartphone / Tablette',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '5€'
                 }
             ]
@@ -205,16 +148,7 @@ const ServiceAteliers = () => {
                 {
                     id: '4.3',
                     titre: 'Installation d\'un seul composant',
-                    description: "                        <p>Assemblage de composants, pièce par pièce, à l’intérieur d’un boîtier (Boîtier, alimentation,\n" +
-                        "carte mère, processeur, RAM, refroidisseur, disques, carte graphique, lecteurs et cartes\n" +
-                        "contrôleurs si besoin) Une fois le PC assemblé, un premier démarrage et une batterie de tests à\n" +
-                        "l’aide d’un disque contenant un système Windows de l’Atelier sera effectuée.</p>\n" +
-                        "<br/>\n" +
-                        "<p>Cette prestation n’inclut pas le Flash/BackFlash de BIOS / UEFI de la carte mère, ni l’installation du système d’exploitation sur l’un des disques du PC assemblé</p>\n" +
-                        "<br/>\n" +
-                        "<p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+ intervention sous 72H » à 25€.</p>\n" +
-                        "<br/>\n" +
-                        "<p>Si le montage comprend un refroidissement par Watercooling AIO ou des systèmes de L Ds RGB alors le montage devient complexe et nécessitera l'ajout de la prestation « Service+ intervention COMPLEXE » à 25€.</p>",
+                    description: "                        <p>.</p>",
                     valeur: '10€'
                 },
             ]
@@ -226,29 +160,13 @@ const ServiceAteliers = () => {
                 {
                     id: '5.1',
                     titre: 'Désinfection contre les virus',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '50€'
                 },
                 {
                     id: '5.2',
                     titre: 'Câble management d\'un PC Tour',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '35€'
                 },
             ]
@@ -260,43 +178,19 @@ const ServiceAteliers = () => {
                 {
                     id: '6.1',
                     titre: 'Sauvegarde et/ou transfert de données',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '50€'
                 },
                 {
                     id: '6.2',
                     titre: 'Clonage d\'un disque système ou de données',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '35€'
                 },
                 {
                     id: '6.3',
                     titre: 'Récupération des données',
-                    description: "                            <p>Recherche de panne matériel et/ou logiciel, tests de tous les composants (boîtier,\n" +
-                        "                                montage+câble management, carte mère, BIOS/UEFI, CPU, RAM, Alim, carte PCIe,\n" +
-                        "                                disques, refroidissements, OS) des pièces ensembles dans l’ordinateur et\n" +
-                        "                                individuellement par logiciel ou en tests croisés, puis Devis de réparation</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Le diagnostic n’inclus pas de réparation(s) !</p>\n" +
-                        "                            <br/>\n" +
-                        "                            <p>Possibilité d’intervention dans les 72H en rajoutant la prestation « Service+\n" +
-                        "                                intervention sous 72H » à 25€</p>",
+                    description: "                            <p></p>",
                     valeur: '15€'
                 },
             ]

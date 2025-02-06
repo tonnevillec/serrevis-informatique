@@ -181,7 +181,7 @@ const ServiceAssistance = () => {
     return (
         <div className={"w-full grid grid-cols-3 gap-4"}>
             {datas.map(d =>
-                <div className="card bg-accent text-white m-4 basis-1/4 shadow-xl" key={d.id}>
+                <div className="card bg-green-600 text-white m-4 basis-1/4 shadow-xl" key={d.id}>
                     <div className="card-body p-4">
                         <h2 className="card-title">{d.titre}</h2>
                         {d.subtitle !== '' && <small className={d.subtitleClass}>{d.subtitle}</small>}

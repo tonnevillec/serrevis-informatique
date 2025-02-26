@@ -5,6 +5,7 @@ import SectionApropos from "./apropos/SectionApropos.jsx";
 import SectionCoordonnees from "./coordonnees/SectionCoordonnees.jsx";
 import SectionAgenda from "./agenda/SectionAgenda.jsx";
 import SectionAvis from "./avis/SectionAvis.jsx";
+import SectionVentes from "./vente/SectionVentes.jsx";
 
 const Landing = () => {
     return (
@@ -30,6 +31,8 @@ const Landing = () => {
             </section>
 
             <SectionServices />
+
+            <SectionVentes />
 
             <SectionApropos />
 

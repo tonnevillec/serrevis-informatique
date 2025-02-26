@@ -16,8 +16,6 @@ const SectionApropos = () => {
                             <div className={"p-3"}>
                                 <p className={"mb-1"}>Un <b>local d’une surface de 53m²</b> <b>ouvert tous les
                                     jours</b></p>
-                                <p className={"mb-1"}>Un porche d’entrée pour déposer et sécuriser vos vélos /
-                                    trottinettes</p>
                                 <p className={"mb-1"}>Un espace client de 10m² avec le <b>coin reconditionné</b> et
                                     son bac
                                     pour les parapluies</p>

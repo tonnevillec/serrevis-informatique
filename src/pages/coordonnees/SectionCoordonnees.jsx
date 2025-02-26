@@ -58,10 +58,7 @@ const SectionCoordonnees = () => {
                                 <tr>
                                     <td>Samedi :</td>
                                     <td>8h15 - 12h</td>
-                                    <td>
-                                        Atelier de groupe
-                                        <br/>14h30 - 18h45
-                                    </td>
+                                    <td>14h30 - 18h45</td>
                                 </tr>
                                 <tr>
                                     <td>Dimanche :</td>

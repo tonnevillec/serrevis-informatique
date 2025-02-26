@@ -80,12 +80,6 @@ const SectionServices = () => {
                                     paiement sur le compte avant remise de la commande (comptez 48h d’attente minimum
                                     après envoi du virement)
                                 </li>
-                                <li className={`py-1 border border-b-1 border-t-0 border-r-0 border-l-0`}>
-                                    <b>Mandat administratif</b> via la plateforme ChorusPro - Montant maximal de 2500€
-                                    par facture (Utile pour les établissements administratifs : écoles, police,
-                                    gendarmeries, caisse maladie, etc<br/>
-                                    Et nécessitant un bon de commande administratif correctement rempli et signé)
-                                </li>
                             </ul>
                         </div>
                     </div>

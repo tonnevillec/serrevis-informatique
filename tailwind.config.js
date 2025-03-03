@@ -26,7 +26,7 @@ export default {
     themes: ["winter"],
   },
   safelist: [
-    'border-b'
+    'border-b', 'bg-error'
   ]
 }
 

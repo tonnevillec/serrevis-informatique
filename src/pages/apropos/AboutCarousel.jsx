@@ -1,79 +1,29 @@
-import React, {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faImage, faXmark} from "@fortawesome/free-solid-svg-icons";
+import {faImage} from "@fortawesome/free-solid-svg-icons";
 
-import img1 from '../../assets/atelier/Ilot_Apple-Mac01.jpg'
-import img2 from '../../assets/atelier/Ilot_Apple-Mac02.jpg'
-import img3 from '../../assets/atelier/Ilot_Ordi-Portable01.jpg'
-import img4 from '../../assets/atelier/Ilot_Ordi-Portable02.jpg'
-import img5 from '../../assets/atelier/Interieur_local.jpg'
-import img6 from '../../assets/atelier/Montage-sur-mesure_Ordi-Tour01.jpg'
-import img7 from '../../assets/atelier/Montage-sur-mesure_Ordi-Tour02.jpg'
-import img8 from '../../assets/atelier/Montage-sur-mesure_Ordi-Tour03.jpg'
-import img9 from '../../assets/atelier/Plan-travail_Montage01.jpg'
-import img10 from '../../assets/atelier/Plan-travail_Montage02.jpg'
-import img11 from '../../assets/atelier/Plan-travail_Ordi-portables.jpg'
+import backApi from "../../services/backApi.jsx";
+import {BACK_URL} from "../../config.js";
 
 const AboutCarousel = () => {
-    const [modalDatas, setModalDatas] = useState({})
+    const [datas, setDatas] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    const datas = [
-        {
-            id: 1,
-            titre: "Ilot Apple-Mac",
-            url: img1
-        },
-        {
-            id: 2,
-            titre: "Ilot Apple-Mac",
-            url: img2
-        },
-        {
-            id: 3,
-            titre: "Ilot Ordinateur Portable",
-            url: img3
-        },
-        {
-            id: 4,
-            titre: "Ilot Ordinateur Portable",
-            url: img4
-        },
-        {
-            id: 5,
-            titre: "Intérieur local",
-            url: img5
-        },
-        {
-            id: 6,
-            titre: "Montage sur mesure Ordinateur Tour",
-            url: img6
-        },
-        {
-            id: 7,
-            titre: "Montage sur mesure Ordinateur Tour",
-            url: img7
-        },
-        {
-            id: 8,
-            titre: "Montage sur mesure Ordinateur Tour",
-            url: img8
-        },
-        {
-            id: 9,
-            titre: "Plan de travail Montage",
-            url: img9
-        },
-        {
-            id: 10,
-            titre: "Plan de travail Montage",
-            url: img10
-        },
-        {
-            id: 11,
-            titre: "Plan de travail Ordinateurs portables",
-            url: img11
-        },
-    ]
+    useEffect(() => {
+        fetchDatas()
+            .finally(() => setLoading(false))
+    }, []);
+
+    const fetchDatas = async () => {
+        try {
+            const d = await backApi.apiFetch('/api/boutiquePhotos')
+            setDatas(d)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    const [modalDatas, setModalDatas] = useState({})
 
     const showModal = (e) => {
         e.preventDefault()
@@ -95,15 +45,15 @@ const AboutCarousel = () => {
 
     return (
         <div className={"grid grid-cols-4 gap-2 w-full"}>
-            {datas.map(d =>
+            {!loading && datas.map(d =>
                 <figure className={"max-w-48"}
                         onClick={showModal}
                         key={d.id}
-                        data-title={d.titre}
+                        data-title={d.alt}
                         data-id={d.id}
-                        data-url={d.url}
+                        data-url={d.img}
                 >
-                    <img src={d.url} className={"object-cover"} alt={d.titre}/>
+                    <img src={`${BACK_URL}/uploads/images/${d.img}`} className={"object-cover"} alt={d.alt}/>
                 </figure>
             )}
 
@@ -117,7 +67,7 @@ const AboutCarousel = () => {
 
                     <div className={"w-full py-4 px-8 flex justify-center"}>
                         <figure>
-                            <img src={modalDatas.url} className={"object-cover"} alt={modalDatas.titre}/>
+                            <img src={`${BACK_URL}/uploads/images/${modalDatas.url}`} className={"object-cover"} alt={modalDatas.titre}/>
                         </figure>
                     </div>
                 </div>

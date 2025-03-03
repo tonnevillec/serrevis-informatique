@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import {Outlet, useLocation} from "react-router-dom";
 import Landing from "./Landing.jsx";
 import Navbar from "../components/Navbar.jsx";
@@ -7,10 +7,28 @@ import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import MentionsLegales from "./MentionsLegales.jsx";
 import Confidentialite from "./Confidentialite.jsx";
 import PlanSite from "./PlanSite.jsx";
-import atelier from '../assets/atelier.svg'
+import backApi from "../services/backApi.jsx";
+import {BACK_URL} from "../config.js";
 
 const Home = () => {
     const location = useLocation()
+    const [datas, setDatas] = useState({})
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        fetchDatas()
+            .finally(() => setLoading(false))
+
+    }, []);
+
+    const fetchDatas = async () => {
+        try {
+            const d = await backApi.apiFetch('/api/datas')
+            setDatas(d)
+        } catch (error) {
+            console.error(error)
+        }
+    }
 
     return (
         <>
@@ -30,21 +48,25 @@ const Home = () => {
 
             <footer className="footer bg-serrevis-200 p-10">
                 <aside className={"text-neutral-content"}>
-                    <img src={atelier} className={"max-w-36"}  alt={"Logo de l'atelier serre-vis informatique"}/>
+                    {(!loading && datas.logo.length > 0) &&
+                        <img src={`${BACK_URL}/uploads/images/${datas.logo}`}
+                             className={"max-w-36"}
+                             alt={"Logo de l'atelier serre-vis informatique"}
+                        />
+                    }
                 </aside>
 
                 <nav className={"text-neutral-content"}>
                     <h6 className="footer-title">Contact</h6>
-                    <address className="">
-                        2/4 Place Jules Guesde<br/>
-                        59810 LESQUIN<br/>
-                    </address>
-                    <p className="">
-                        <FontAwesomeIcon icon={faPhone} className={"me-2"}></FontAwesomeIcon>03.65.67.05.18
-                    </p>
-                    <p className="">
-                        <FontAwesomeIcon icon={faEnvelope} className={"me-2"}></FontAwesomeIcon>contact@serrevis-informatique.fr
-                    </p>
+                    {(!loading && datas.adresse.length > 0 )&&
+                        <address className="" dangerouslySetInnerHTML={{__html: datas.adresse}} />
+                    }
+                    {(!loading && datas.telephone.length > 0 )&&
+                        <p><FontAwesomeIcon icon={faPhone} className={"me-2"}></FontAwesomeIcon>{datas.telephone}</p>
+                    }
+                    {(!loading && datas.mail.length > 0 )&&
+                        <p><FontAwesomeIcon icon={faEnvelope} className={"me-2"}></FontAwesomeIcon>{datas.mail}</p>
+                    }
                 </nav>
 
                 <nav>

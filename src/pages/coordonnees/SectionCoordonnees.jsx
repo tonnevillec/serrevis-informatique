@@ -1,9 +1,27 @@
-import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import Map from "../Map.jsx";
+import {useEffect, useState} from "react";
+import backApi from "../../services/backApi.jsx";
 
-const SectionCoordonnees = () => {
+const SectionCoordonnees = ({valeurs}) => {
+    const [datas, setDatas] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        fetchDatas()
+            .finally(() => setLoading(false))
+    }, []);
+
+    const fetchDatas = async () => {
+        try {
+            const d = await backApi.apiFetch('/api/horaires')
+            setDatas(d)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     return (
         <section className={"w-full bg-white py-8"} id={"section-coordonnees"}>
             <div className={"container mx-auto"}>
@@ -15,56 +33,34 @@ const SectionCoordonnees = () => {
                             <h3 className={"w-full font-bold"}>
                                 Coordonnées de contact :
                             </h3>
-                            <p className={"mb-4"}>
-                                2/4 Place Jules Guesde<br/>
-                                59810 LESQUIN<br/>
-                                <br/>
+                            {valeurs.adresse.length > 0 &&
+                                <p className={"mb-4"} dangerouslySetInnerHTML={{__html: valeurs.adresse}} />
+                            }
+                            {valeurs.telephone.length > 0 &&
+                                <p className={"mb-4"}>
                                 <FontAwesomeIcon icon={faPhone}
-                                                 className={"me-2"}></FontAwesomeIcon>03 65 67 05 18<br/>
-                                <br/>
-                                <FontAwesomeIcon icon={faEnvelope} className={"me-2"}></FontAwesomeIcon>contact@serrevis-informatique.fr
-                            </p>
+                                                 className={"me-2"}></FontAwesomeIcon>{valeurs.telephone}
+                                </p>
+                            }
+                            {valeurs.mail.length > 0 &&
+                                <p className={"mb-4"}>
+                                    <FontAwesomeIcon icon={faEnvelope}
+                                                     className={"me-2"}></FontAwesomeIcon>{valeurs.mail}
+                                </p>
+                            }
 
                             <h3 className={"w-full font-bold"}>
                                 Horaires d'ouverture :
                             </h3>
                             <table className={"table table-xs"}>
                                 <tbody>
-                                <tr>
-                                    <td>Lundi :</td>
-                                    <td>8h15 - 12h</td>
-                                    <td>14h30 - 18h45</td>
-                                </tr>
-                                <tr>
-                                    <td>Mardi :</td>
-                                    <td>8h15 - 12h</td>
-                                    <td>14h30 - 18h45</td>
-                                </tr>
-                                <tr>
-                                    <td>Mercredi :</td>
-                                    <td>8h15 - 12h</td>
-                                    <td>14h30 - 18h45</td>
-                                </tr>
-                                <tr>
-                                    <td>Jeudi :</td>
-                                    <td>8h15 - 12h</td>
-                                    <td>14h30 - 18h45</td>
-                                </tr>
-                                <tr>
-                                    <td>Vendredi :</td>
-                                    <td>8h15 - 12h</td>
-                                    <td>14h30 - 18h45</td>
-                                </tr>
-                                <tr>
-                                    <td>Samedi :</td>
-                                    <td>8h15 - 12h</td>
-                                    <td>14h30 - 18h45</td>
-                                </tr>
-                                <tr>
-                                    <td>Dimanche :</td>
-                                    <td>10h - 13h</td>
-                                    <td></td>
-                                </tr>
+                                {!loading && datas.map(d =>
+                                    <tr key={d.id}>
+                                        <td>{d.jour} :</td>
+                                        <td>{d.matin}</td>
+                                        <td>{d.apm}</td>
+                                    </tr>
+                                )}
                                 </tbody>
                             </table>
                         </div>
@@ -76,7 +72,7 @@ const SectionCoordonnees = () => {
                                 Plan d'accès :
                             </h3>
 
-                            <Map/>
+                            <Map coordonneesX={valeurs.mapCoordonneesX} coordonneesY={valeurs.mapCoordonneesY} />
                         </div>
                     </div>
                 </div>

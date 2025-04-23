@@ -45,7 +45,7 @@ const Landing = () => {
 
             <section className={"w-full bg-white py-2"} id={"section-services"}>
                 <div className="container mx-auto mb-4">
-                    {(!loading && datas.alertMessage.length > 0) &&
+                    {(!loading && datas.alertMessage !== null && datas.alertMessage.length > 0) &&
                         <div className="w-full rounded-full border-2 border-secondary text-center font-bold text-xl p-4 text-secondary" dangerouslySetInnerHTML={{__html: datas.alertMessage}} />
                     }
                 </div>

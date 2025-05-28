@@ -24,9 +24,9 @@ const Paiements = () => {
         <div className="container mx-auto">
             <h2 className={"w-full text-center text-xl font-bold py-2 border-1 border-b"}>Paiement en boutique</h2>
 
-            <div className={"w-full grid grid-cols-3 gap-4"}>
+            <div className={"w-full grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4"}>
                 {!loading && datas.map(d =>
-                    <div className={`card ${d.color !== null ? d.color : 'bg-white text-serrevis-100'} m-4 basis-1/4 shadow-xl`} key={d.id}>
+                    <div className={`card ${d.color !== null ? d.color : 'bg-white text-serrevis-100'} m-1 lg:m-4 lg:basis-1/4 shadow-xl`} key={d.id}>
                         <div className="card-body p-4">
                             <h2 className="card-title">{d.titre}</h2>
                             <ul className="w-full p-2 text-sm">

@@ -23,11 +23,11 @@ const SectionCoordonnees = ({valeurs}) => {
     }
 
     return (
-        <section className={"w-full bg-white py-8"} id={"section-coordonnees"}>
+        <section className={"w-full bg-white py-4 lg:py-8"} id={"section-coordonnees"}>
             <div className={"container mx-auto"}>
                 <h2 className={"w-full text-center text-xl font-bold py-2 border-1 border-b mb-4"}>Coordonnées</h2>
 
-                <div className="grid grid-cols-3 gap-4 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4 w-full">
                     <div className="col-span-1">
                         <div className={"rounded-2xl shadow-lg bg-base-100 p-4 w-full mb-4"}>
                             <h3 className={"w-full font-bold"}>
@@ -67,7 +67,7 @@ const SectionCoordonnees = ({valeurs}) => {
                     </div>
 
                     <div className="col-span-2">
-                        <div className={"rounded-2xl shadow-lg bg-base-100 p-4 w-full mb-4"}>
+                        <div className={"rounded-2xl shadow-lg bg-base-100 p-0 lg:p-4 w-full mb-4"}>
                             <h3 className={"w-full font-bold"}>
                                 Plan d'accès :
                             </h3>

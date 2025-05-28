@@ -21,7 +21,7 @@ const AProposTechnicien = () => {
     }
 
     return (
-        <div className={"rounded-2xl shadow-lg bg-base-100 p-4 w-full grid grid-cols-3"}>
+        <div className={"rounded-2xl shadow-lg bg-base-100 p-2 lg:p-4 w-full grid grid-cols-1 lg:grid-cols-3"}>
             {!loading &&
                 <>
                     <div className="col-span-2">

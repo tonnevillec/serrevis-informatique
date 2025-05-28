@@ -8,14 +8,14 @@ const SectionServices = () => {
     const [service, setService] = useState('depannage')
 
     return (
-        <section className={"w-full bg-white py-8"} id={"section-services"}>
+        <section className={"w-full bg-white py-4 lg:py-8"} id={"section-services"}>
             <div className={"container mx-auto mb-4"}>
                 <h2 className={"w-full text-center text-xl font-bold py-2 border-1 border-b"}>Services & Tarifs</h2>
 
                 <p className={"w-full text-red-700 text-center my-4"}>Aucune prestation de services n'est éligible
                     au crédit d'impôt</p>
 
-                <div className={"grid grid-cols-3 gap-4"}>
+                <div className={"grid grid-cols-3 gap-2 lg:gap-4"}>
                     <button type={"button"}
                             className={`btn ${service === 'depannage' ? 'btn-primary' : 'btn-ghost'}`}
                             onClick={() => setService('depannage')}>

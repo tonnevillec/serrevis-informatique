@@ -29,13 +29,13 @@ const SectionVentes = () => {
     }
 
     return (
-        <section className={"w-full bg-white py-8"} id={"section-apropos"}>
+        <section className={"w-full bg-white py-4 lg:py-8"} id={"section-apropos"}>
             <div className={"container mx-auto"}>
                 <h2 className={"w-full text-center text-xl font-bold py-2 border-1 border-b mb-4"}>Vente d'ocassion et reconditionné</h2>
 
-                <div className={"w-full grid grid-cols-3 gap-4"}>
+                <div className={"w-full grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4"}>
                     {!loading && datas.map(d =>
-                        <div className={"rounded-2xl shadow-lg bg-base-100 p-4 w-full grid grid-row mb-4"} key={d.id}>
+                        <div className={"rounded-2xl shadow-lg bg-base-100 p-2 lg:p-4 w-full grid grid-row mb-2 lg:mb-4"} key={d.id}>
                             <div className="w-full mb-2">
                                 <h3 className={"card-title mb-2"}>{d.modele}</h3>
 

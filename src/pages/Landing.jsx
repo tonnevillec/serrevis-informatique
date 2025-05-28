@@ -30,16 +30,18 @@ const Landing = () => {
         <>
             <section className="w-full bg-gradient-to-b from-blue-100 pt-24 pb-16" id={"section-header"}>
                 <div className="flex container mx-auto flex-row">
-                    <div className={"pe-6"}>
+                    <div className={"p-2 lg:pe-6"}>
 
-                        <h1 className="text-5xl font-bold">Serre-Vis Informatique</h1>
+                        <h1 className="text-3xl w-full text-center lg:text-5xl lg:text-left font-bold">Serre-Vis Informatique</h1>
 
-                        {!loading && <div className="pt-5 text-justify" dangerouslySetInnerHTML={{__html: datas.hero}} />}
+                        {!loading && <div className="pt-5 w-full text-justify" dangerouslySetInnerHTML={{__html: datas.hero}} />}
 
                         <p className={"text-right"}>À votre serre-vis</p>
                     </div>
 
-                    <img src={hello} className="max-w-lg" alt="Bienvenue sur le site de serre-vis informatique!"/>
+                    <img src={hello}
+                         className={"hidden lg:block max-w-lg"}
+                         alt="Bienvenue sur le site de serre-vis informatique!"/>
                 </div>
             </section>
 
